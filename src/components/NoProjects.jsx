@@ -8,8 +8,12 @@ export default function NoProjects() {
         className="w-auto h-20 object-contain mx-auto"
         src={NoProjectsLogo}
       />
-      <h2 className="mt-3">No Projects to be displayed yet</h2>
-      <p className="mt-3">Add your first project</p>
+      <h2 className="mt-3 font-bold text-gray-700 text-2xl">
+        No Project Selected
+      </h2>
+      <p className="mt-3 text-gray-600 text-md">
+        Select a project or Add a new one
+      </p>
       <Button>+Add Project</Button>
     </div>
   );
