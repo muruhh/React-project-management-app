@@ -1,7 +1,7 @@
 import NoProjectsLogo from "../assets/no-projects.png";
 import Button from "./Button";
 
-export default function NoProjects() {
+export default function NoProjects({ onAddProject }) {
   return (
     <div className="h-screen w-screen place-content-center text-center">
       <img
@@ -14,7 +14,7 @@ export default function NoProjects() {
       <p className="mt-3 text-gray-600 text-md">
         Select a project or Add a new one
       </p>
-      <Button>+Add Project</Button>
+      <Button clickHandler={onAddProject}>+Add Project</Button>
     </div>
   );
 }
