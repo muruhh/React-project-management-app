@@ -5,12 +5,19 @@ import Sidebar from "./components/Sidebar.jsx";
 
 function App() {
   const [addProject, setAddProject] = useState(false);
+  const [Projects, setProjects] = useState([]);
 
   function handleAddProject() {
     setAddProject(true);
   }
 
-  function saveProject() {}
+  function saveProject(title, desc) {
+    setProjects((previousProjects) => {
+      return [{ title: title, desc: desc }, ...previousProjects];
+    });
+
+    console.log(Projects);
+  }
 
   function cancelProject() {
     setAddProject(false);
