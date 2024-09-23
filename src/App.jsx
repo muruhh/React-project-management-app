@@ -4,18 +4,21 @@ import NoProjects from "./components/NoProjects.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 
 function App() {
-  const [addProject, setAddProject] = useState(false);
+  const [addProject, setAddProject] = useState(true);
 
   function handleAddProject() {
     setAddProject(true);
   }
 
-  const ProjectForm = addProject ? <AddProjectForm /> : undefined;
+  const ProjectForm = addProject ? (
+    <AddProjectForm />
+  ) : (
+    <NoProjects onAddProject={handleAddProject} />
+  );
 
   return (
     <main className="h-dvh mt-8 flex gap-8">
       <Sidebar onAddProject={handleAddProject} />
-      <NoProjects onAddProject={handleAddProject} />
       {ProjectForm}
     </main>
   );
