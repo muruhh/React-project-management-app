@@ -10,8 +10,17 @@ function App() {
     setAddProject(true);
   }
 
+  function saveProject() {}
+
+  function cancelProject() {
+    setAddProject(false);
+  }
+
   const ProjectForm = addProject ? (
-    <AddProjectForm />
+    <AddProjectForm
+      onSaveProject={saveProject}
+      onCancelProject={cancelProject}
+    />
   ) : (
     <NoProjects onAddProject={handleAddProject} />
   );

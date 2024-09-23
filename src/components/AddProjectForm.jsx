@@ -1,9 +1,6 @@
 import Button from "./Button";
 
-export default function AddProjectForm() {
-  function saveProject() {}
-  function cancelProject() {}
-
+export default function AddProjectForm({ onSaveProject, onCancelProject }) {
   return (
     <div className="h-screen w-screen place-content-center">
       <div className="w-3/4 flex flex-col mx-auto backdrop:bg-stone-900/90 p-4 rounded-md shadow-md">
@@ -29,11 +26,14 @@ export default function AddProjectForm() {
         ></textarea>
 
         <div className="flex place-content-center">
-          <Button clickHandler={saveProject} extraClasses="w-1/3 mx-2 text-sm">
+          <Button
+            clickHandler={onSaveProject}
+            extraClasses="w-1/3 mx-2 text-sm"
+          >
             Save
           </Button>
           <Button
-            clickHandler={cancelProject}
+            clickHandler={onCancelProject}
             extraClasses="mx-2 bg-red-500 text-sm hover:bg-red-400"
           >
             Cancel
