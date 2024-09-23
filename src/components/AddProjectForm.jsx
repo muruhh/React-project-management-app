@@ -34,7 +34,7 @@ export default function AddProjectForm() {
           </Button>
           <Button
             clickHandler={cancelProject}
-            extraClasses="mx-2 bg-red-500 text-sm"
+            extraClasses="mx-2 bg-red-500 text-sm hover:bg-red-400"
           >
             Cancel
           </Button>

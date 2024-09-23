@@ -4,7 +4,7 @@ import NoProjects from "./components/NoProjects.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 
 function App() {
-  const [addProject, setAddProject] = useState(true);
+  const [addProject, setAddProject] = useState(false);
 
   function handleAddProject() {
     setAddProject(true);
